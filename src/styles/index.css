@@ -101,10 +101,12 @@ main .main-content .main-content-description .group-buttons button {
     color:#FFD1AF;
     cursor: pointer;
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+    transition: all 0.5s ease;
 }
 
 main .main-content .main-content-description .group-buttons button:hover {
-    background-color: #d75a00b6;
+    background-color: #FFD1AF;
+    color:#D75a00;
 }
 
 main .main-content .main-content-description .group-buttons button i {
@@ -120,10 +122,11 @@ main .main-content .main-content-description .group-buttons .group-icons{
 main .main-content .main-content-description .group-buttons .group-icons i{
     color:#D75a00;
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 main .main-content .main-content-description .group-buttons .group-icons i:hover{
-    color:#d75a00b6;
+    color:#FFD1AF;
 }
 
 /*Main Content end*/
@@ -147,17 +150,25 @@ main .title-cards {
 /*Card begin*/
 
 main .cards-group {
+    width: 98%;
+    margin: 20px;
     display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    justify-content: left;
+    gap: 22px;
+    overflow-x: auto;
+}
+
+main .cards-group::-webkit-scrollbar {
+    visibility: hidden;
 }
 
 main .card {
-    width: 200px;
+    min-width: 200px;
     height: 270px;
+    position: relative;
+    left: 0;
     background-color: #fff;
+    transition: 0.5s
 }
 
 main .card img {
@@ -176,11 +187,23 @@ main .card .title {
 }
 
 main .card p {
-    height: 70px;
+    height: auto;
     padding: 10px;
     font-size: 12px;
     text-align: justify;
-    overflow-y: scroll;
+    overflow-y: auto;
+}
+
+main .card p::-webkit-scrollbar {
+    width: 3px;
+}
+
+main .card p::-webkit-scrollbar-thumb {
+    background-color: #D75a00;
+}
+
+main .card p::-webkit-scrollbar-track {
+    background-color: #e87e31;
 }
 
 /*Card end*/
